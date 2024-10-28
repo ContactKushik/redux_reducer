@@ -254,7 +254,7 @@ const Users = () => {
         ))}
       </ol>
 
-      {/* <form action="" className="flex gap-2 mt-5" onSubmit={(e)=>{
+      <form action="" className="flex gap-2 mt-5" onSubmit={(e)=>{
           e.preventDefault()
           console.log(name.current.value);
           dispatch(createUser(name.current.value));
@@ -268,7 +268,7 @@ const Users = () => {
             className="rounded px-4 py-1 text-black"
           />
           <input type='submit' className="bg-blue-500 rounded px-4 py-1" />
-        </form> */}
+        </form>
     </div>
   );
 };
