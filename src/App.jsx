@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decrement, increment, incrementByAmount } from './store/reducers/counterSlice';
+import { decrement, increment, incrementAsync, incrementByAmount } from './store/reducers/counterSlice';
 
 const App = () => {
   const {value} = useSelector((state)=>state.counter)
@@ -17,6 +17,7 @@ const App = () => {
           <button className="px-3 py-2 rounded bg-blue-500" onClick={()=>dispatch(increment())}>Increment</button>
           <button className="px-3 py-2 rounded bg-blue-500" onClick={()=>dispatch(decrement())}>Decrement</button>
           <button className="px-3 py-2 rounded bg-blue-500" onClick={()=>dispatch(incrementByAmount(5))}>Increment by 5</button>
+          <button className="px-3 py-2 rounded bg-blue-500" onClick={()=>dispatch(incrementAsync(5))}>Increment by 5 Async</button>
         </div>
       </div>
     </div>
