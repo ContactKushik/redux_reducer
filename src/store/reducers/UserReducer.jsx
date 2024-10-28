@@ -244,11 +244,11 @@ export const UserSlice = createSlice({
             // yha array me reduce krdo, index se remove krdo
             state.users=state.users.filter((user)=>user.id!==action.payload)
         },
-        createUser:(state,action)=>{
-            // yha new user add krdo
-            const username = action.payload;
-            state.users.push({name:username});
-        }
+        // createUser:(state,action)=>{
+        //     // yha new user add krdo
+        //     const username = action.payload;
+        //     state.users.push({name:username});
+        // }
     },
 })
 export const {deleteUser,createUser}  = UserSlice.actions;
