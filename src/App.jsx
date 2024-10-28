@@ -7,7 +7,7 @@ import Products from './components/Products';
 const App = () => {
   return (
     <div className="text-white w-[100%] h-screen">
-      <nav className='p-5 flex justify-center gap-8 text-xl'>
+      <nav className='py-3 flex justify-center gap-8 text-xl fixed bg-zinc-800 w-full'>
         <NavLink to="/">🏠Home</NavLink>
         <NavLink to="/users">👤Users</NavLink>
         <NavLink to="products">🛒Products</NavLink>

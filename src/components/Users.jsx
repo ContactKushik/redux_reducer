@@ -243,7 +243,7 @@ const Users = () => {
   };
   const name = useRef(null);
   return (
-    <div className=" text-white h-screen w-[100%] p-10">
+    <div className=" text-white h-screen w-[100%] p-10 py-20">
       <h1 className="text-2xl font-semibold text-zinc-300 mb-5">User list</h1>
       <ol className="list-decimal">
         {users.map((item, i) => (
