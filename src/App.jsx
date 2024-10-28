@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
-
+import React, { useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { createUser, deleteUser } from './store/reducers/UserReducer';
 const App = () => {
   // const [users, setusers] = useState([
   //   {
@@ -235,15 +235,42 @@ const App = () => {
   //   },
   // ]);
   const {users}  = useSelector(state=>state.UserReducer);
-  // console.log(d);
+  // console.log(users);
+  const dispatch=useDispatch();
+  const deleteHandler = (id)=>{
+    console.log(id);
+    dispatch(deleteUser(id));
+  }
+  const name = useRef(null);
   return (
     <div className=" text-white h-screen w-[100%] p-10">
-      <h1 className="text-2xl font-semibold text-zinc-300">User list</h1>
-      <ol className='list-decimal'>
+      <h1 className="text-2xl font-semibold text-zinc-300 mb-5">User list</h1>
+      <ol className="list-decimal">
         {users.map((item, i) => (
-          <li key={item.id}>{item.name}</li>
+          <li key={i} className="mb-2 text-zinc-400">
+            {item.name}
+            <button onClick={() => deleteHandler(item.id)}>❌</button>
+          </li>
         ))}
       </ol>
+
+    
+        <form action="" className="flex gap-2 mt-5" onSubmit={(e)=>{
+          e.preventDefault()
+          console.log(name.current.value);
+          dispatch(createUser(name.current.value));
+          name.current.value ='';
+        }
+        }>
+          <input
+            ref={name}
+            type="text"
+            placeholder="enter new user"
+            className="rounded px-4 py-1 text-black"
+          />
+          <input type='submit' className="bg-blue-500 rounded px-4 py-1" />
+        </form>
+      
     </div>
   );
 }
