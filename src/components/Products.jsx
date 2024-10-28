@@ -14,7 +14,7 @@ const Products = () => {
     <div className=" text-white h-screen w-[100%] p-10 py-20 ">
       <h1 className="text-2xl font-semibold text-zinc-300 mb-5">Product list</h1>
       <ol className="list-decimal">
-        {products.map((item, i) => (
+        {products && products.map((item, i) => (
           <li key={i} className="mb-5 text-zinc-400 flex gap-5 items-center ">
             <div className='h-20 w-20 overflow-hidden'>
               <img src={item.image} alt="" className="object-contain " />
