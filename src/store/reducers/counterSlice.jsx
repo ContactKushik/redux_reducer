@@ -29,7 +29,7 @@ export const counterSlice = createSlice({
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;
 
 export const incrementAsync = (amount) => (dispatch) => {
-  console.log(dispatch);
+  // console.log(dispatch);
   setTimeout(() => {
     dispatch(incrementByAmount(amount));
   }, 1000);
