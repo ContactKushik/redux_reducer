@@ -2,6 +2,7 @@ import React from 'react'
 import { NavLink,Routes,Route } from 'react-router-dom'
 import Home from './components/Home';
 import Users from './components/Users';
+import Products from './components/Products';
 
 const App = () => {
   return (
@@ -15,7 +16,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/users' element={<Users/>} />
-        
+        <Route path='/products' element={<Products/>}/>
     
       </Routes>
     </div>
