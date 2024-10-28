@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-// import { createUser, deleteUser } from "./store/reducers/UserReducer";
+import { createUser, deleteUser } from "../store/reducers/UserReducer";
 const Users = () => {
   // const [users, setusers] = useState([
   //   {
